@@ -4,6 +4,7 @@ An error occurs when i'm trying to run created app which uses PythonCall.
 
 To create an app run file **deploy/compile_app.sh** .
 Tests and building proccess run correctly but when i'm runing `PythonCall_tst.exe` in cmd, i have an error:
+
 `fatal: error thrown and no exception handler available.
 InitError(mod=:C, error=ErrorException("no environment in the LOAD_PATH depends on CondaPkg"))
 error at .\error.jl:33
