@@ -1,0 +1,13 @@
+name = "PythonCall_tst"
+uuid = "fb71cc4a-b88a-4c12-bac1-9ef90448d14f"
+authors = ["Yzh <iulia.zhivolupova@gmail.com> and contributors"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
