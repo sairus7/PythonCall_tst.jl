@@ -1,4 +1,6 @@
 module PythonCall_tst
+
+import JuliaPythonAdaptor
 using PythonCall
 
 
