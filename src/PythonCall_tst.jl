@@ -1,5 +1,24 @@
 module PythonCall_tst
+
+import JuliaPythonAdaptor
 using PythonCall
+
+
+const WFDB = PythonCall.pynew() # initially NULL
+function __init__()
+    PythonCall.pycopy!(WFDB, pyimport("wfdb"))
+end
+export WFDB
+
+function read_ann(file::String)
+    record, ext = splitext(file)
+    ann = WFDB.rdann(record, ext[2:end])
+    pos = PythonCall.pyconvert(Vector{Int}, ann.sample)
+    anntype = PythonCall.pyconvert(Vector{Symbol}, ann.symbol)
+    fs = PythonCall.pyconvert(Float64, ann.fs)
+
+    return ann, pos, anntype, fs
+end
 
 
 # some orfinary func from library docs

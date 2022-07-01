@@ -4,6 +4,7 @@ authors = ["Yzh <iulia.zhivolupova@gmail.com> and contributors"]
 version = "0.1.0"
 
 [deps]
+JuliaPythonAdaptor = "0e307d70-50ba-423d-98c4-b9d407ed9420"
 PythonCall = "6099a3de-0909-46bc-b1f4-468b9a2dfc0d"
 
 [compat]
